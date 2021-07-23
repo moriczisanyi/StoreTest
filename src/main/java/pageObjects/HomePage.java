@@ -18,8 +18,15 @@ public class HomePage {
     @FindBy(xpath = "//*[@class='login']")
     private WebElement signInButton;
 
+    @FindBy(id = "email_create")
+    private WebElement createAccButton;
+
     public void clickSignInButton()
     {
         signInButton.click();
+    }
+    public void sendNewAccEmail(String email)
+    {
+        createAccButton.sendKeys(email);
     }
 }
